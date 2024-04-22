@@ -32,10 +32,11 @@ setInterval(() => {
 function addPoint(element) {
     const spanElement = element.querySelector('.point-span');
 
-    spanElement.classList.add('animate-point');
+    if (!spanElement.classList.contains('animate-point')) {
+        spanElement.classList.add('animate-point');
 
-    setTimeout(() => {
-        spanElement.classList.remove('animate-point');
-    }, 1500);
+        setTimeout(() => {
+            spanElement.classList.remove('animate-point');
+        }, 1500);
+    }
 }
-
