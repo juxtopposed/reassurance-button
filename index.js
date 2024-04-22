@@ -2,7 +2,7 @@ const textElement = document.querySelector(".animated-text")
 const texts = [
     "Everything is going too fast",
     "But you’re okay",
-    "You are enough",
+    "You are kenough",
     "Re-assure yourself",
     "Click the button and be free",
     "No matter how hard things are",
