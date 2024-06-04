@@ -11,32 +11,34 @@
   <link rel="icon" type="image/png" href="/favicon.png">
 </head>
 
-<body class="w-full h-screen flex flex-col items-center justify-evenly bg-background text-text overflow-x-hidden">
-  <div class="h-64 w-64 rounded-lg absolute bg-secondary blur-5xl z-0 translate-x-40 -translate-y-24 animate-bloba">
-  </div>
-  <div class="h-64 w-64 rounded-lg absolute bg-secondary blur-5xl z-0 -translate-x-40 translate-y-24 animate-blobb">
-  </div>
-  <p class="text-base text-text font-medium font-body z-10">The Reassurance Button</p>
-  <h1 class="text-5xl font-bold font-heading text-center z-10 max-[800px]:text-2xl">
-    <span class="animated-text inline-block transition-opacity duration-300 ease-out opacity-0">Things might be
-      overwhelming rn
-    </span>
-  </h1>
-  <button class="rounded-lg h-16 w-48 bg-text text-background text-xl font-medium drop-shadow-lg font-body relative z-0"
-    onclick="addPoint(this)">
-    Reassure me!
-    <span
-      class="text-green font-body text-xs font-medium absolute -translate-x-1/2 left-1/2 -top-1/2 whitespace-nowrap block z-[-5] opacity-0 point-span">+1
-      Reassurance Point
-    </span>
-  </button>
-  <div class="flex flex-row align-middle gap-5">
-    <a href="https://twitter.com/Juxtopposed" target="_blank" class="text-base text-text font-medium font-body z-10 opacity-30 hover:opacity-100 transition-opacity">
-      By @Juxtopposed
-    </a>
-    <a href="https://github.com/juxtopposed/reassurance-button" target="_blank" class="text-base text-text font-medium font-body z-10 opacity-30 hover:opacity-100 transition-opacity">
-      GitHub
-    </a>
+<body>
+  <div class="w-full h-screen flex flex-col items-center justify-evenly bg-background text-text overflow-x-hidden relative">
+    <div class="h-64 w-64 rounded-lg absolute bg-secondary blur-5xl z-0 translate-x-40 -translate-y-24 animate-bloba">
+    </div>
+    <div class="h-64 w-64 rounded-lg absolute bg-secondary blur-5xl z-0 -translate-x-40 translate-y-24 animate-blobb">
+    </div>
+    <p class="text-base text-text font-medium font-body z-10">The Reassurance Button</p>
+    <h1 class="text-5xl font-bold font-heading text-center z-10 max-[800px]:text-2xl">
+      <span class="animated-text inline-block transition-opacity duration-300 ease-out opacity-0">Things might be
+        overwhelming rn
+      </span>
+    </h1>
+    <button class="rounded-lg h-16 w-48 bg-text text-background text-xl font-medium drop-shadow-lg font-body relative z-0"
+      onclick="addPoint(this)">
+      Reassure me!
+      <span
+        class="text-green font-body text-xs font-medium absolute -translate-x-1/2 left-1/2 -top-1/2 whitespace-nowrap block z-[-5] opacity-0 point-span">+1
+        Reassurance Point
+      </span>
+    </button>
+    <div class="flex flex-row align-middle gap-5">
+      <a href="https://twitter.com/Juxtopposed" target="_blank" class="text-base text-text font-medium font-body z-10 opacity-30 hover:opacity-100 transition-opacity">
+        By @Juxtopposed
+      </a>
+      <a href="https://github.com/juxtopposed/reassurance-button" target="_blank" class="text-base text-text font-medium font-body z-10 opacity-30 hover:opacity-100 transition-opacity">
+        GitHub
+      </a>
+    </div>
   </div>
   <script src="/index.js"></script>
 </body>
