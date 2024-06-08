@@ -1,8 +1,8 @@
-const textElement = document.querySelector(".animated-text")
+const textElement = document.querySelector(".animated-text");
 const texts = [
     "Everything is going too fast",
     "But you’re okay",
-    "You are ken",
+    "You are kenough",
     "Re-assure yourself",
     "Click the button and be free",
     "No matter how hard things are",
@@ -12,6 +12,14 @@ const texts = [
     "Just go with the flow",
     "Plan your way through",
     "You’ve got this",
+    "Just take a deep breath",
+    "You've been too overwhelmed",
+    "You were born to be great",
+    "You are doing your best",
+    "You are awesome",
+    "You can do it",
+    "You will get through anything",
+    "You are ready",
     "Things might be overwhelming rn",
 ];
 
@@ -28,15 +36,22 @@ setInterval(() => {
     }, 300);
 }, 3000);
 
+let points = localStorage.getItem('points') ? parseInt(localStorage.getItem('points')) : 0;
+const pointCounter = document.getElementById('point-counter');
+pointCounter.textContent = `${points}`;
 
 function addPoint(element) {
     const spanElement = element.querySelector('.point-span');
 
     if (!spanElement.classList.contains('animate-point')) {
+        points++;
+        localStorage.setItem('points', points);
+        pointCounter.textContent = `${points}`;
+        
         spanElement.classList.add('animate-point');
 
-        setTimeout(() => {
+        spanElement.addEventListener('animationend', () => {
             spanElement.classList.remove('animate-point');
-        }, 1500);
+        }, { once: true });
     }
 }
