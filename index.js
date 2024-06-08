@@ -41,17 +41,23 @@ const pointCounter = document.getElementById('point-counter');
 pointCounter.textContent = `${points}`;
 
 function addPoint(element) {
-    const spanElement = element.querySelector('.point-span');
+    points++;
+    localStorage.setItem('points', points);
+    pointCounter.textContent = `${points}`;
 
-    if (!spanElement.classList.contains('animate-point')) {
-        points++;
-        localStorage.setItem('points', points);
-        pointCounter.textContent = `${points}`;
-        
-        spanElement.classList.add('animate-point');
+    const spanElement = document.createElement('span');
+    spanElement.textContent = '+1 Reassurance Point';
+    spanElement.classList.add(
+        'text-green', 'font-body', 'text-xs',
+        'font-medium', 'absolute', '-translate-x-1/2',
+        'left-1/2', '-top-1/2', 'whitespace-nowrap',
+        'block', 'z-[-5]', 'opacity-0',
+        'point-span', 'animate-point'
+    );
 
-        spanElement.addEventListener('animationend', () => {
-            spanElement.classList.remove('animate-point');
-        }, { once: true });
-    }
+    spanElement.addEventListener('animationend', () => {
+        spanElement.remove();
+    }, { once: true });
+
+    element.appendChild(spanElement);
 }
