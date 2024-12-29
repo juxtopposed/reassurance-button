@@ -9,6 +9,7 @@ const texts = [
     "The tools are there for you",
     "You need to chillax",
     "Everything is gonna be fine",
+    "Rest is productive too",
     "Just go with the flow",
     "Plan your way through",
     "You’ve got this",
